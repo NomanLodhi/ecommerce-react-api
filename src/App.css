@@ -1,0 +1,45 @@
+body{
+  font-family: "Poppins", serif;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: aqua;
+}
+.bg-men{
+  background-image: url('../src/media/men-jacket.jpg'),linear-gradient(transparent,black);
+background-blend-mode: color-dodge;
+  background-size: cover;
+}
+.bg-women{
+  background-image: url('../src/media/women-dress.jpg'),linear-gradient(transparent,black);
+    background-blend-mode: color-dodge;
+  background-size: cover;
+}
+.bg-electronic{
+  background-image: url('../src/media/electronic-items.jpg'),linear-gradient(transparent,black);
+    background-blend-mode: color-dodge;
+  background-size: cover;
+}
+.bg-jewelry{
+  background-image: url('../src/media/jewelry.jpg'),linear-gradient(transparent,black);
+  background-blend-mode: color-dodge;
+  background-size: cover;
+}
+.h-banner{
+  min-height: 500px;
+}
+.bg-news{
+  background-image: url('../src/media/bg-newsletter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.w-input{
+  width: 300px;
+}
+.divider{
+  width: 100px;
+  height: 5px;
+}
+ td{
+  border-width: 1px;
+  padding: 10px;
+}
