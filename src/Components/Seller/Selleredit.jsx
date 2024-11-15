@@ -7,6 +7,12 @@ export default function Selleredit() {
         .then(res=>res.json())
         .then(data=>setProducts(data) )
     },[])
+
+    const Del=function(e){
+     fetch(`http://localhost:8000/blogs/${e.id}`,{
+        method:'DELETE'
+     })
+    }
   return (
     <div style={{height:'1000px', overflow:'scroll'}}>
         
@@ -27,7 +33,7 @@ export default function Selleredit() {
    <button className='btn btn-success rounded-0'>Edit</button>
     </td>
     <td>
-   <button className='btn btn-danger rounded-0'>Delete</button>
+   <button className='btn btn-danger rounded-0' onClick={()=>{Del(product)}}>Delete</button>
     </td>
 </tr>
     ))}
