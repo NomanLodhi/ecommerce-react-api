@@ -10,7 +10,7 @@ export default function Cart() {
     
   },[])
 
-  
+  document.title=`(${cart.length}) Cart`
   const Delproduct= function(e){
     
 fetch(`http://localhost:8000/cart/${e.id}`,{
