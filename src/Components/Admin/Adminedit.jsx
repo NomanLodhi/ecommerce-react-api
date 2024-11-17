@@ -3,6 +3,7 @@ import { useParams,Link, useNavigate } from 'react-router-dom'
 
 export default function Adminedit() {
   let nav=useNavigate()
+  let {productId}=useParams()
     const[products,setProducts]=useState('')
 useEffect(()=>{
 fetch(`http://localhost:8000/blogs`)
@@ -44,7 +45,7 @@ let Del=function(e){
                $ {product.price}                
                 </td>
                 <td>
-                <Link to={`edit/${product.id}`} className='btn btn-success rounded-0'>Edit</Link>
+                <Link to={`${product.id}`} className='btn btn-success rounded-0'>Edit</Link>
                 
                 </td>
                 <td>

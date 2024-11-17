@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Selleredit() {
     const [products,setProducts]=useState('');
@@ -30,7 +31,7 @@ export default function Selleredit() {
     $ {product.price}
     </td>
     <td>
-   <button className='btn btn-success rounded-0'>Edit</button>
+   <Link to={`${product.id}`} className='btn btn-success rounded-0'>Edit</Link>
     </td>
     <td>
    <button className='btn btn-danger rounded-0' onClick={()=>{Del(product)}}>Delete</button>

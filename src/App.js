@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
@@ -17,21 +17,32 @@ import Selleradd from './Components/Seller/Selleradd';
 
 
 function App() {
-
-  return (
+  const [cart,setCart]=useState('')
+  useEffect(()=>{
+    fetch('http://localhost:8000/cart')
+    .then((res)=> res.json())
+    .then((data)=> setCart(data))
+  },[])
+    
+return (
     <>
-    <Navbar/>
+    <Navbar count={cart.length}/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='admin' element={<Adminhome/>}>
-      <Route path='admin/editproduct' element={<Adminedit/>}/>
-      <Route path='admin/addproduct' element={<Adminadd/>}/>
+      <Route path='editproduct' element={<Adminedit/>}/>
+      <Route path='editproduct/:productId' element={<Edit/>}/>
+     
+      <Route path='addproduct' element={<Adminadd/>}/>
       </Route>
-      <Route path='edit/:productId' element={<Edit/>}/>
+
       <Route path='seller' element={<Sellerhome/>}>
-      <Route path='seller/editproduct' element={<Selleredit/>}/>
-      <Route path='seller/addproduct' element={<Selleradd/>}/>
+      <Route path='editproduct' element={<Selleredit/>}/>
+      <Route path='editproduct/:productId' element={<Edit/>}/>
+      <Route path='addproduct' element={<Selleradd/>}/>
+    
       </Route>
+
       <Route path='viewblog/:productId' element={<Viewblog/>}/>
       <Route path='cart' element={<Cart/>}/>
       <Route path='*' element={<Pagenotfound/>} />

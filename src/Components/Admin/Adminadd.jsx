@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Adminadd() {
+  document.title='Admin - Add new product'
     let [productData,setProductData]=useState({})
     let navigate=useNavigate()
     let sendData=function(e){

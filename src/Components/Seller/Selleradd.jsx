@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Selleradd() {
-
+document.title='Seller - Add product'
     const [data,setData]=useState({})
     const Add=function(e){
       e.preventDefault()
