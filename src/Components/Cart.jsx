@@ -3,18 +3,26 @@ import React, { useEffect, useState } from 'react'
 export default function Cart() {
 
   let [cart,setCart]=useState('')
+  let [recall,setRecall]=useState(true)
   useEffect(()=>{
     fetch('http://localhost:8000/cart')
     .then((res)=> res.json())
     .then((data)=> setCart(data))
     
-  },[])
+  },[recall])
 
   document.title=`(${cart.length}) Cart`
   const Delproduct= function(e){
     
 fetch(`http://localhost:8000/cart/${e.id}`,{
     method:'DELETE'
+}).then(()=>{
+  if(recall){
+    setRecall(false)
+  }
+  else{
+    setRecall(true)
+  }
 })
   }
 

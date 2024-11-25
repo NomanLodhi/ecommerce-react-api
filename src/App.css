@@ -8,20 +8,24 @@ body::-webkit-scrollbar-thumb{
   background-image: url('../src/media/men-jacket.jpg'),linear-gradient(transparent,black);
 background-blend-mode: color-dodge;
   background-size: cover;
+  height: 500px;
 }
 .bg-women{
   background-image: url('../src/media/women-dress.jpg'),linear-gradient(transparent,black);
-    background-blend-mode: color-dodge;
+  background-blend-mode: color-dodge;
+  height: 500px;
   background-size: cover;
 }
 .bg-electronic{
   background-image: url('../src/media/electronic-items.jpg'),linear-gradient(transparent,black);
-    background-blend-mode: color-dodge;
+  height: 250px;
+  background-blend-mode: color-dodge;
   background-size: cover;
 }
 .bg-jewelry{
   background-image: url('../src/media/jewelry.jpg'),linear-gradient(transparent,black);
   background-blend-mode: color-dodge;
+  height: 250px;
   background-size: cover;
 }
 .h-banner{

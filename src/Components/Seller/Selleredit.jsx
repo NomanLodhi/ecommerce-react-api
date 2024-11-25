@@ -3,15 +3,23 @@ import { Link } from 'react-router-dom';
 
 export default function Selleredit() {
     const [products,setProducts]=useState('');
+    const [recall,setRecall]=useState(true)
     useEffect(()=>{
         fetch('http://localhost:8000/blogs')
         .then(res=>res.json())
         .then(data=>setProducts(data) )
-    },[])
+    },[recall])
 
     const Del=function(e){
      fetch(`http://localhost:8000/blogs/${e.id}`,{
         method:'DELETE'
+     }).then(()=>{
+        if(recall){
+            setRecall(false)
+        }
+        else{
+            setRecall(true)
+        }
      })
     }
   return (

@@ -5,24 +5,24 @@ export default function banner() {
     <div className='container py-3'>
       <div className="row h-banner mb-5">
         <div className="col-lg-4">
-            <div className="bg-men h-100 w-100 rounded-3 d-flex flex-column justify-content-end text-light px-3">
+            <div className="bg-men my-2  w-100 rounded-3 d-flex flex-column justify-content-end text-light px-3">
                 <h5 className='display-6'>Men</h5>
                 <p>Best Men Clothing collection</p>
             </div>
         </div>
         <div className="col-lg-4">
-            <div className="bg-electronic h-50 w-100 rounded-3 d-flex flex-column justify-content-end text-light px-3">
+            <div className="bg-electronic my-2   w-100 rounded-3 d-flex flex-column justify-content-end text-light px-3">
                 <h5 className='display-6'>Electronics</h5>
                 <p>Best Electronic Items collection</p>
             </div>
-            <div className="bg-jewelry h-50 w-100 mt-2 rounded-3 d-flex flex-column justify-content-end text-light px-3">
+            <div className="bg-jewelry w-100 my-2 rounded-3 d-flex flex-column justify-content-end text-light px-3">
                 <h5 className='display-6'>Jewelry</h5>
                 <p>Best Jewelry collection</p>
             </div>
            
         </div>
         <div className="col-lg-4">
-            <div className="bg-women h-100 w-100 rounded-3 d-flex flex-column justify-content-end text-light px-3">
+            <div className="bg-women w-100 rounded-3 my-2 d-flex flex-column justify-content-end text-light px-3">
                 <h5 className='display-6'>Women</h5>
                 <p>Best Women Clothing collection</p>
             </div>
